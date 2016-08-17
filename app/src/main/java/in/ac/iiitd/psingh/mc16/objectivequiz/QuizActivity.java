@@ -80,10 +80,10 @@ public class QuizActivity extends AppCompatActivity {
     {
         Random r1 = new Random();
         final int randnum = r1.nextInt(1000) + 1;
-        TextView mytext = (TextView) findViewById(R.id.textViewer);
-        String mystring = String.valueOf(randnum);
-        String question = "Is " + mystring + " a prime number?";
-        mytext.setText(question);
+        TextView text1 = (TextView) findViewById(R.id.textViewer);
+        String str1 = String.valueOf(randnum);
+        String question = "Is " + str1 + " a prime number?";
+        text1.setText(question);
         return randnum;
     }
 
