@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ObjectiveQuiz</string>
+    <string name="app_name">PrimeNumber</string>
     <string name="question">"Is this is good question?"</string>
     <string name="trueText">True</string>
     <string name="falseText">False</string>
