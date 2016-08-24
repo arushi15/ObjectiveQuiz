@@ -55,4 +55,18 @@
         android:background="@android:color/holo_blue_light"
         android:onClick="genrandom"/>
 
-    </LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hint"
+        android:id="@+id/HintButton"
+        android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cheat"
+        android:id="@+id/CheatButton"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>

@@ -1,13 +1,15 @@
 package in.ac.iiitd.psingh.mc16.objectivequiz;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.pdf.PdfDocument;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.EditText;
+import android.widget.EditText;                                                   // TODO: 8/25/2016      intent
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,6 +21,9 @@ public class QuizActivity extends AppCompatActivity {
 
     private Button mTrueButton;
     private Button mFalseButton;
+    private Button mHideButton;
+    private Button mCheatButton;
+    int divi=0;
     int randnum;
     private static final String TAG = "QuizActivity";
 
@@ -26,8 +31,6 @@ public class QuizActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
-
-
         mTrueButton = (Button) findViewById(R.id.TrueButton);
         mFalseButton = (Button) findViewById(R.id.FalseButton);
 //        mTrueButton.setOnClickListener(new OnClickListener() {
@@ -126,8 +129,11 @@ public class QuizActivity extends AppCompatActivity {
 
     int primenum(int n) {
         int x = n / 2;
-        for (int i = 2; i <= x; i++) {
-            if (n % i == 0) {
+        for (int i = 2; i <= x; i++)
+        {
+            if (n % i == 0)
+            {
+                divi=i;
                 return 0;
             }
         }
@@ -139,4 +145,11 @@ public class QuizActivity extends AppCompatActivity {
 
     }
 
+    public void hintfunction(View view)
+    {
+        Intent intent = new Intent(this, act1.class);
+        intent.putExtra("key",randnum);
+        intent.putExtra("key1",divi);
+        startActivity(intent);
+    }
 }
