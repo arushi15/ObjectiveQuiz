@@ -82,7 +82,7 @@ public class QuizActivity extends AppCompatActivity {
     public int genrand1()
     {
         Random r1 = new Random();
-        final int randnum = r1.nextInt(1000) + 1;
+        randnum = r1.nextInt(1000) + 1;
         TextView text1 = (TextView) findViewById(R.id.textViewer);
         String str1 = String.valueOf(randnum);
         String question = "Is " + str1 + " a prime number?";
@@ -148,6 +148,7 @@ public class QuizActivity extends AppCompatActivity {
     public void hintfunction(View view)
     {
         Intent intent = new Intent(this, act1.class);
+        primenum(randnum);
         intent.putExtra("key",randnum);
         intent.putExtra("key1",divi);
         startActivity(intent);

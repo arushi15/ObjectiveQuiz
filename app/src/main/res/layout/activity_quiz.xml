@@ -60,6 +60,7 @@
         android:layout_height="wrap_content"
         android:text="Hint"
         android:id="@+id/HintButton"
+        android:onClick="hintfunction"
         android:layout_gravity="center_horizontal" />
 
     <Button
