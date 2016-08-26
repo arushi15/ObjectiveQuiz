@@ -21,10 +21,11 @@ public class QuizActivity extends AppCompatActivity {
 
     private Button mTrueButton;
     private Button mFalseButton;
-    private Button mHideButton;
+    private Button mHintButton;
     private Button mCheatButton;
     int divi=0;
     int randnum;
+    boolean hint,cheat;
     private static final String TAG = "QuizActivity";
 
     @Override
@@ -33,6 +34,9 @@ public class QuizActivity extends AppCompatActivity {
         setContentView(R.layout.activity_quiz);
         mTrueButton = (Button) findViewById(R.id.TrueButton);
         mFalseButton = (Button) findViewById(R.id.FalseButton);
+        mHintButton= (Button) findViewById(R.id.HintButton);
+        mCheatButton= (Button) findViewById(R.id.CheatButton);
+
 //        mTrueButton.setOnClickListener(new OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
@@ -93,6 +97,7 @@ public class QuizActivity extends AppCompatActivity {
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
         super.onSaveInstanceState(savedInstanceState);
+
         Log.i(TAG, "Inside onSaveInstance");
     }
 
@@ -137,10 +142,13 @@ public class QuizActivity extends AppCompatActivity {
                 return 0;
             }
         }
+        divi = 0;
         return 1;
     }
 
     public void genrandom(View view) {
+        mHintButton.setEnabled(true);
+        mCheatButton.setEnabled(true);
         genrand1();
 
     }
@@ -151,6 +159,17 @@ public class QuizActivity extends AppCompatActivity {
         primenum(randnum);
         intent.putExtra("key",randnum);
         intent.putExtra("key1",divi);
+        mHintButton.setEnabled(hint);
         startActivity(intent);
     }
+
+    public void cheatfunction(View view)
+    {
+        Intent intent=new Intent(this, act2.class);
+        primenum(randnum);
+        intent.putExtra("key2", randnum);
+        intent.putExtra("key3",divi);
+        mCheatButton.setEnabled(cheat);
+        startActivity(intent);
+      }
 }

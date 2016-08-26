@@ -61,6 +61,8 @@
         android:text="Hint"
         android:id="@+id/HintButton"
         android:onClick="hintfunction"
+        android:background="@android:color/holo_purple"
+        android:textColor="@android:color/white"
         android:layout_gravity="center_horizontal" />
 
     <Button
@@ -68,6 +70,9 @@
         android:layout_height="wrap_content"
         android:text="Cheat"
         android:id="@+id/CheatButton"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:background="@android:color/holo_purple"
+        android:textColor="@android:color/white"
+        android:onClick="cheatfunction" />
 
 </LinearLayout>

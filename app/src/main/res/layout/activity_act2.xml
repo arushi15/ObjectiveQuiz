@@ -7,17 +7,17 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="in.ac.iiitd.psingh.mc16.objectivequiz.act1"
+    tools:context="in.ac.iiitd.psingh.mc16.objectivequiz.act2"
     android:background="@drawable/pinkbg">
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Back"
-        android:id="@+id/BackButton"
+        android:id="@+id/BackButton2"
         android:background="@android:color/holo_purple"
         android:textColor="@android:color/white"
-        android:onClick="backfunction1"
+        android:onClick="backfunction2"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 
@@ -25,11 +25,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Text1"
-        android:id="@+id/textView1"
-        android:textStyle="bold"
-        android:textColor="@android:color/white"
-        android:layout_alignParentTop="true"
+        android:text="Text2"
+        android:id="@+id/textView2"
+        android:layout_above="@+id/BackButton2"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="35dp" />
+        android:layout_marginBottom="72dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"/>
 </RelativeLayout>
